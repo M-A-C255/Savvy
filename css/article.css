@@ -1,0 +1,1488 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:300,400,700);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic);
+
+body {
+    background-image: url("../assets/bg.png"); 
+    background-repeat: no-repeat;
+    background-size: 1550px;
+    background-color: #D8D8D8;
+
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    padding-top: 38px;
+
+    align-items: center;
+    justify-content: center; 
+    font-family: Montserrat, Arial, Helvetica, sans-serif; 
+
+    transition: background .4s ease-in;
+}
+
+a {
+    text-decoration: none;
+    color: #D8D8D8;
+    font-weight: 700;
+}
+
+nav {
+    background-color: #1d1d1d;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2222222;
+    padding: 10px;
+}
+
+nav ul {
+    font-size: 0.75rem;
+    position: absolute;
+    right: 2rem;
+    top: 1.1rem;
+}
+
+nav ul li {
+    margin-left: 2.25rem;
+    list-style-type: none;
+    float: left;
+    visibility: visible;
+}
+
+nav ul {
+    font-size: 0.75rem;
+    position: absolute;
+    right: 2rem;
+    top: 1.1rem;
+}
+
+.btn {
+    border: 3px solid #D8D8D8;
+    border-radius: 2rem;
+    padding: 0.5rem 0.9rem;
+    transition: all 0.3s ease-in-out;
+}
+    
+.btn:hover {
+    color: #000000;
+    background: #D8D8D8;
+}
+
+/*menu on top left*/
+
+.menu {
+    width: 300px;
+    position: absolute;
+    margin-left: 15px;
+    border-radius: 10px;
+    z-index: 100;
+   
+    background-color: rgba(255, 255, 255, 0.519);
+    -webkit-clip-path: circle(24px at 30px 24px);
+    clip-path: circle(24px at 32px 24px);
+    -webkit-transition: -webkit-clip-path 0.5625s, clip-path 0.375s;
+    transition: -webkit-clip-path 0.5625s, clip-path 0.375s;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(4.9px);  
+}
+
+.menu:hover {
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    -webkit-transition-duration: 0.75s;
+    transition-duration: 0.75s;
+    -webkit-clip-path: circle(390px at 225px 24px);
+    clip-path: circle(390px at 150px 24px);
+}
+
+.hamburger {
+    padding: 24px 20px;
+    cursor: pointer;
+    -webkit-transform-origin: 32px 24px;
+    -ms-transform-origin: 32px 24px;
+    transform-origin: 32px 24px;
+}
+    
+.hamburger div {
+    position: relative;
+    left: 1.8;
+    width: 20px;
+    height: 3px;
+    background: rgba(0, 0, 0, 0.87);
+}
+    
+.hamburger div:before,
+.hamburger div:after {
+    display: block;
+    content: "";
+    width: 20px;
+    height: 3px;
+    background: rgba(0, 0, 0, 0.87);
+    position: absolute;
+}
+      
+.hamburger div:before { top: -7px; }
+    
+.hamburger div:after { top: 7px; }
+
+.menuOpt {
+    display: block;
+    line-height: 50px;
+    padding: 0 20px;
+    color: inherit;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    z-index: 22;
+}
+
+.menuOpt:hover { background: #d4d3d3; }
+
+.menuOpt:active { background: #a0a0a0; }
+
+/*Search button*/
+
+.searchNav {
+    margin-top: 0px;
+    padding-left: 100px;
+}
+
+.search{
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+}
+
+.searchBtn{
+    width: 50px;
+    height: 50px;
+    border-style: none;
+    font-size: 13px;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    right: 0px;
+    color:#D8D8D8 ;
+    background-color:transparent;
+    pointer-events: painted;  
+}
+
+.searchBtn:focus ~ .iSearch{
+    width: 200px;
+    border-radius: 0px;
+    background-color: transparent;
+    border-bottom:5px solid rgba(255,255,255,.5);
+    transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+
+.iSearch{
+    height: 28px;
+    width: 0px;
+    border-style: none;
+    padding: 10px;
+    font-size: 13px;
+    letter-spacing: 2px;
+    outline: none;
+    border-radius: 25px;
+    transition: all .5s ease-in-out;
+    background-color: rgba(255, 255, 255, 0.27);
+  -webkit-transition: -webkit-clip-path 0.5625s, clip-path 0.375s;
+  transition: -webkit-clip-path 0.5625s, clip-path 0.375s;
+    padding-right: 40px;
+    color:#D8D8D8;
+  }
+
+.iSearch:focus{
+    width: 200px;
+   border-radius: 0px;
+   background-color: transparent;
+   border-bottom:5x solid rgba(255, 255, 255, 0.5);
+   transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+
+.iSearch::placeholder{
+    color:rgba(255, 255, 255, 0.793);
+    font-size:13px;
+    letter-spacing: 2px;
+    font-weight: 100;
+}
+
+/*SCROLLBAR*/
+
+::-webkit-scrollbar {
+    width: 12px;
+    background-color: transparent;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: #2e2e2e;
+    border-radius: 10px;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #565656;
+}
+  
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.wholePage .introInfo {
+    padding-top: 60px; 
+    padding-left: 60px;
+    padding-right: 60px; 
+    padding-bottom: 1px;
+    margin:0 auto; 
+    text-align:center;
+    z-index: 100;
+}
+
+/* Typography */
+/**************************/
+
+.wholePage h2 {
+    font-family:'Oswald', 
+    sans-serif; 
+    font-size:70px; 
+    letter-spacing:10px; 
+    text-align:center; 
+    color:white; 
+    font-weight:400; 
+    text-transform:uppercase; 
+    z-index:10; 
+    opacity:.9;
+}
+
+.wholePage p {
+    font-family:'Source Sans Pro', sans-serif; 
+    font-weight:400; 
+    font-size: 17px; 
+    line-height:24px;
+}
+
+.firstLetter {
+    font-weight:400; 
+    float: left; 
+    font-size: 84px; 
+    line-height: 64px; 
+    padding-top: 4px; 
+    padding-right: 8px; 
+    padding-left: 3px; 
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.sc {color: #09313b;}
+
+/*TITLE*/
+
+.SAVVY{
+    /* background-color: aqua; */
+    position: relative;
+    top: 20px;
+    display: flex;
+    justify-content: space-between;
+    height: 90px;
+    margin: 0;
+}
+
+.svy {
+	z-index: 1;
+	width: 100%;
+	position: absolute;
+	justify-content: center;
+	text-align: center;
+	font-size: 40px;
+}
+
+#s {
+	margin-left: -190px;
+	margin-top: -23px;
+}
+
+#v1 {
+	margin-left: 10px;
+	margin-top: -110px;
+}
+
+#y {
+	margin-left: 220px;
+	margin-top: -120px;
+}
+
+.av {
+	width: 100%;
+	position: absolute;
+	justify-content: center;
+	text-align: center;
+	font-size: 40px;
+	
+}
+
+#a1 {
+	margin-left: -90px;
+    margin-top: -40px;
+	
+}
+
+#v2 {
+	margin-left: 110px;
+    margin-top: -108px;
+}
+
+.articleSub {
+    position: relative;
+    bottom: 60px;
+    left: 60px;
+}
+
+.articleInfo {
+    position: relative;
+    bottom: 40px;
+}
+
+/* Section - Block */
+/**************************/
+.wholePage .parPage {
+    background-color: #D8D8D8;
+    padding: 60px; 
+    width: 820px; 
+    margin:0 auto; 
+    text-align:justify;
+    height: auto;
+}
+
+/* Section - Parallax */
+/**************************/
+.wholePage .parPageOne {
+    padding-top: 200px; 
+    padding-bottom: 200px; 
+    overflow: hidden; 
+    position: relative; 
+    width: 100%; 
+    background-attachment: fixed; 
+    background-size: cover; 
+    -moz-background-size: cover; 
+    -webkit-background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: top center;
+}
+
+.wholePage .parPageTwo {
+    padding-bottom: 150px; 
+    overflow: hidden; 
+    position: relative; 
+    width: 100%; 
+    height: auto;
+
+    background-image: url(../assets/ai2.PNG); 
+    background-color: #000000;
+    /* filter: saturate(0); */
+    background-attachment: fixed; 
+    background-size: cover; 
+    -moz-background-size: cover; 
+    -webkit-background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center center;
+}
+
+.wholePage .parPageThree {
+    padding-top: 200px; 
+    padding-bottom: 200px; 
+    overflow: hidden; 
+    position: relative; 
+    width: 100%; 
+    background-attachment: fixed; 
+    background-size: cover; 
+    -moz-background-size: cover; 
+    -webkit-background-size: cover;
+    background-repeat: 
+    no-repeat; 
+    background-position: center center;
+}
+
+/* Extras */
+/**************************/
+.wholePage .line-break {
+    border-bottom: 1px solid black; 
+    width: 150px; 
+    margin:0 auto;
+}
+
+/* READ MORE SECTION*/
+
+.panel {
+    position: relative;
+    padding-top: 90px;
+    padding-left: 35px;
+}
+
+.TECH{
+    position: absolute;
+    top: 20px;
+    display: flex;
+    justify-content: space-between;
+    height: 90px;
+    margin: 0;
+    color: #c8c7c7;
+    font-size: 45px;
+}
+
+.TC {
+	z-index: 1;
+	width: 100%;
+	position: absolute;
+	justify-content: center;
+	text-align: center;
+}
+
+#t {
+    margin-left: 100px;
+    margin-top: 250px;
+}
+
+#c {
+    margin-left: 340px;
+    margin-top: -140px;
+}
+
+#dot {
+    margin-left: 555px;
+    margin-top: -150px;
+}
+
+.EH {
+	width: 100%;
+	position: absolute;
+	justify-content: center;
+	text-align: center;
+}
+
+#e {
+    margin-left: 220px;
+    margin-top: 235px;
+}
+
+#h {
+    margin-left: 450px;
+    margin-top: -125px;
+}
+
+.panelOne {
+    position: absolute;
+    margin-top: 0px;
+    width: 100%;
+}
+
+.PHYSICS1 {
+    position: absolute;
+    top: 20px;
+    display: flex;
+    justify-content: space-between;
+    height: 90px;
+    margin: 0;
+    color: #c8c7c7;
+    font-size: 45px;
+    padding: 0;
+}
+
+.PYIS {
+	z-index: 1;
+	width: 100%;
+	position: absolute;
+	justify-content: center;
+	text-align: center;
+}
+
+#p {
+    margin-left: 100px;
+    margin-top: 530px;
+}
+
+#y2 {
+    margin-left: 340px;
+    margin-top: -125px;
+}
+
+#i {
+    margin-left: 570px;
+    margin-top: -130px;
+}
+
+#s2 {
+    margin-left: 775px;
+    margin-top: -145px;
+}
+
+.HSC {
+	width: 100%;
+	position: absolute;
+	justify-content: center;
+	text-align: center;
+}
+
+#h2 {
+    margin-left: 220px;
+    margin-top: 520px;
+}
+
+#s3 {
+    margin-left: 450px;
+    margin-top: -120px;
+}
+
+#c2 {
+    margin-left: 655px;
+    margin-top: -145px;
+}
+
+#dot2 {
+    margin-left: 880px;
+    margin-top: -140px;
+}
+
+.panelTwo {
+    z-index: 100;
+    margin-top: 200px;
+    width: 100%;
+}
+
+.ESPORTS {
+    position: absolute;
+    top: 20px;
+    display: flex;
+    justify-content: space-between;
+    height: 90px;
+    margin: 0;
+    color: #c8c7c7;
+    font-size: 45px;
+    padding: 0;
+}
+
+.EPRS {
+	z-index: 1;
+	width: 100%;
+	position: absolute;
+	justify-content: center;
+	text-align: center;
+}
+
+#e2 {
+    margin-left: 100px;
+    margin-top: 830px;
+}
+
+#p2 {
+    margin-left: 340px;
+    margin-top: -130px;
+}
+
+#r {
+    margin-left: 575px;
+    margin-top: -145px;
+}
+
+#s4 {
+    margin-left: 815px;
+    margin-top: -136px;
+}
+
+.SOT {
+	width: 100%;
+	position: absolute;
+	justify-content: center;
+	text-align: center;
+}
+
+#s5 {
+    margin-left: 220px;
+    margin-top: 820px;
+}
+
+#o {
+    margin-left: 450px;
+    margin-top: -140px;
+}
+
+#t2 {
+    margin-left: 700px;
+    margin-top: -120px;
+}
+
+#dot3 {
+    margin-left: 930px;
+    margin-top: -140px;
+}
+
+.panelThree {
+    position: relative;
+    margin-top: 205px;
+    width: 100%;
+}
+
+.panel figure {
+    overflow: hidden;
+	position: relative;
+	float: left;
+	margin: 5px 1.5%;
+	height: 170px;
+	width: 320px;
+	background: #000000;
+	text-align: center;
+	cursor: pointer;
+    border-radius: 10px;
+}
+
+.panel figure img {
+    background-color: black;
+    background-size: cover;
+	display: block;
+	height: 100%;
+	width: 100%;
+	opacity: 70%;
+    border-radius: 10px;
+}
+
+.panel figure figcaption {
+	padding: 2em;
+	color: #D8D8D8;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.panel figure h2 span {
+	font-weight: 800;
+}
+
+.panel figure p {
+	letter-spacing: 1px;
+	font-size: 68.5%;
+}
+
+.panel figure figcaption a {
+	z-index: 1000;
+	text-indent: 200%;
+	white-space: nowrap;
+	font-size: 0;
+	opacity: 0;
+}
+
+figure.hoverEffect figcaption::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 75%);
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 75%);
+	content: '';
+	opacity: 0;
+	-webkit-transform: translate3d(0,50%,0);
+	transform: translate3d(0,50%,0);
+}
+
+figure.hoverEffect h2 {
+	position: absolute;
+	top: 95px;
+	left: 0;
+    font-size: 18px;
+	width: 100%;
+	color: #00000000;
+	-webkit-transition: -webkit-transform 0.35s, color 0.35s;
+	transition: transform 0.35s, color 0.35s;
+	-webkit-transform: translate3d(0,-50%,0);
+	transform: translate3d(0,-50%,0);
+}
+
+figure.hoverEffect figcaption::before,
+figure.hoverEffect p {
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+}
+
+figure.hoverEffect p {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+    font-size: 10px;
+	width: 100%;
+	opacity: 0;
+	-webkit-transform: translate3d(0,10px,0);
+	transform: translate3d(0,10px,0);
+}
+
+figure.hoverEffect:hover h2 {
+	color: #fff;
+	-webkit-transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
+	transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
+}
+
+figure.hoverEffect:hover figcaption::before ,
+figure.hoverEffect:hover p {
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+  
+/*FOOTER*/
+
+footer {
+    background-color: #000000;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+    justify-content: space-between;
+    height: 250px;
+}
+
+.footerRow {
+    float: left;
+    width: 100%;
+    padding: 20px;
+    height: 300px; 
+}
+
+footer section {
+    padding: 10px;
+}
+
+footer h4 {
+    color: #F4F2F0;
+    margin-top: 0;
+}
+
+footer ul {
+    color: #F4F2F0;
+    padding-left: 0;
+}
+
+footer ul li{
+    color: #F4F2F0;
+    list-style-type: none;
+    font-size: 12px;
+    opacity: 50%;
+    margin-bottom: 8px;
+}
+
+.general {
+    float: left;
+    width: 16.5%;
+    height: 300px; 
+    text-align: left;
+    line-height: 1.5;
+}
+
+.esport, .tech, .physics {
+    float: left;
+    width: 22%;
+    height: 300px; 
+    text-align: left;
+    line-height: 1.5;
+}
+
+.footerRow a {
+    color: #F4F2F0;
+    font-weight: lighter;
+}
+
+.footerRow a:link {
+    text-decoration: none;
+}
+  
+.footerRow a:visited {
+    text-decoration: none;
+}
+
+.footerRow a:hover {
+    text-decoration: underline;
+}
+
+.footerRow a:active {
+    text-decoration: underline;
+}
+
+/*RESPONSIVENESS EFFECT*/
+
+/* Media Queries */
+/**************************/
+@media screen and (max-width: 479px) {
+    .wholePage .parPage {
+        padding: 30px; width:420px;
+    }
+    .wholePage h2 {
+        font-size:30px;
+    }
+    .wholePage .parPage {
+        padding: 30px;
+    }
+    .wholePage .parPageOne, 
+    .wholePage .parPageTwo, 
+    .wholePage .parPageThree {
+        padding-top:100px; padding-bottom:100px;
+    }
+    
+    #exploremr4, #exploremr5, #exploremr6 {
+        visibility: hidden;
+    }
+
+    .general{
+        width: 100%;
+    }
+
+    .tech, .esport, .physics {
+        margin-top: -60px;
+    }
+    footer {
+        height: 650px;  
+        margin-top: -150px;  
+    }
+
+    .parPageTwo {
+        padding-bottom: 0;
+    }
+
+    .wholePage .parPage {padding: 30px 15px; width:290px;}
+
+    .body {
+        background-size: 1000px;
+    }
+    
+    .TECH, .PHYSICS1, .ESPORTS {
+        position: absolute;
+        font-size: 35px;
+    }
+    
+    .TECH {
+        width: 1000px;
+        top: 200px;
+        left:  -450px;
+    }
+
+    .PHYSICS1 {
+        width: 1000px;
+        margin-top: 405px;
+        left:  -510px;
+    }
+
+    .PYIS {
+        z-index: 1000;
+    }
+
+    .ESPORTS {
+        width: 1000px;
+        margin-top: 625px;
+        left:  -505px;
+    }
+
+    /*TECH TITLE*/
+
+    #t {
+        margin-left: 100px;
+        margin-top: 205px;
+    }
+
+    #e {
+        margin-top: 180px;
+        margin-left: 180px;
+    }
+
+    #c {
+        margin-left: 260px;
+        margin-top: -110px;
+    }
+
+    #h {
+        margin-left: 350px;
+        margin-top: -85px;
+    }
+
+    #dot {
+        margin-left: 450px;
+        margin-top: -120px;
+    }
+
+/*PHYSICS TITLE*/
+.PHYSICS1 {
+    top: 160px;
+}
+
+#p {
+    margin-left: 100px;
+    margin-top: 530px;
+}
+
+#h2 {
+    margin-left: 185px;
+    margin-top: 520px;
+}
+
+#y2 {
+    margin-left: 270px;
+    margin-top: -105px;
+}
+
+#s3 {
+    margin-left: 360px;
+    margin-top: -100px;
+}
+
+#i {
+    margin-left: 435px;
+    margin-top: -105px;
+}
+
+#c2 {
+    margin-left: 510px;
+    margin-top: -110px;
+}
+
+#s2 {
+    margin-left: 600px;
+    margin-top: -100px;
+}
+
+#dot2 {
+    margin-left: 680px;
+    margin-top: -120px;
+}
+    
+/* ESPORTS TITLE */
+
+.ESPORTS {
+    top: 330px;
+}
+
+    #e2 {
+        margin-left: 100px;
+        margin-top: 830px;
+    }
+
+    #s4 {
+        margin-left: 185px;
+        margin-top: -95px;
+    }
+    
+    #p2 {
+        margin-left: 270px;
+        margin-top: -105px;
+    }
+
+    #o {
+        margin-left: 355px;
+        margin-top: -100px;
+    }
+    
+    #r {
+        margin-left: 450px;
+        margin-top: -105px;
+    }
+
+    #t2 {
+        margin-left: 520px;
+        margin-top: -110px;
+    }
+    
+    #s5 {
+        margin-left: 600px;
+        margin-top: 820px;
+    }
+    
+    #dot3 {
+        margin-left: 680px;
+        margin-top: -110px;
+    }
+
+    .panelOne {
+        position: relative;
+        left: -20px;
+        top: 20px;
+    }
+
+    .panelTwo {
+        position: relative;
+        top: -10px;
+        margin: auto;
+        left: -20px;
+    }
+
+    .panelThree {
+        position: relative;
+        top: -35px;
+        left: -20px;
+    }
+}
+
+@media screen and (max-width: 610px) and (min-width: 480px) {
+    body {
+        background-size: 1000px;
+    }
+    
+    .wholePage .parPage {
+        padding: 30px; width:420px;
+    }
+    .wholePage h2 {
+        font-size:30px;
+    }
+    .wholePage .parPage {
+        padding: 30px;
+    }
+    .wholePage .parPageOne, 
+    .wholePage .parPageTwo, 
+    .wholePage .parPageThree {
+        padding-top:100px; padding-bottom:100px;
+    }
+
+    #exploremr4, #exploremr5, #exploremr6 {
+        visibility: hidden;
+    }
+    
+    .TECH {
+        width: 1000px;
+        top: 30px;
+        left: -410px;
+    }
+
+    .PHYSICS1 {
+        width: 1000px;
+        margin-top: 390px;
+        left:  -480px;
+    }
+
+    .PYIS {
+        z-index: 200;
+        height: 20px;
+    }
+
+    .HSC {
+        left: -2px;
+    }
+
+    #i {
+        margin-right: 25px;
+    }
+
+    #c2 {
+        margin-right: 20px;
+    }
+
+    #s2 {
+        margin-right: 20px;
+    }
+
+    #dot2 {
+        margin-right: 20px;
+    }
+    
+    .ESPORTS {
+        width: 1000px;
+        margin-top: 770px;
+        left:  -500px;
+    }
+
+    #o {
+        padding-left: 10px;
+        padding-bottom: 0px;
+        padding-top: 5px;
+    }
+
+    #r {
+        padding-top: 15px;
+        padding-left: 10px;
+    }
+
+    #t2 {
+        padding-top: -10px;
+        padding-left: 5px;
+    }
+
+    #s4 {
+        position: relative;
+        bottom: 10px;
+    }
+
+    #s5 {
+        padding-left: 15px;
+        padding-top: 5px;
+    }
+
+    .panel {
+        position: relative;
+        padding-top: 10px;
+        top: -5px;
+        left: -75px;
+    }
+
+    .panelOne {
+        position: relative;
+        left: 120px;
+        top: 120px;
+    }
+
+    .panelTwo {
+        position: relative;
+        top: 75px;
+        margin: auto;
+        left: 120px;
+    }
+
+    .panelThree {
+        position: relative;
+        top: 30px;
+        left: 120px;
+    }
+}
+@media screen and (max-width: 700px) {
+    .search {
+        visibility: hidden;
+    }
+}
+
+@media screen and (max-width: 780px) and (min-width: 611px){
+    .wholePage .parPage {
+        padding: 30px; width:420px;
+    }
+    .wholePage h2 {
+        font-size:30px;
+    }
+    .wholePage .parPage {
+        padding: 30px;
+    }
+    .wholePage .parPageOne, 
+    .wholePage .parPageTwo, 
+    .wholePage .parPageThree {
+        padding-top:100px; padding-bottom:100px;
+    }
+
+    .TECH, .PHYSICS1, .ESPORTS {
+        position: absolute;
+        margin-left: -50px;
+        font-size: 30px;
+    }
+
+    .TECH {
+        width: 1000px;
+        top: 20px;
+        left:  -420px;
+    }
+
+    #t {
+        margin-left: 100px;
+        margin-top: 190px;
+    }
+
+    #e {
+        margin-top: 180px;
+        margin-left: 180px;
+    }
+
+    #c {
+        margin-left: 260px;
+        margin-top: -90px;
+    }
+
+    #h {
+        margin-left: 350px;
+        margin-top: -85px;
+    }
+
+    #dot {
+        margin-left: 430px;
+        margin-top: -100px;
+    }
+
+    .PHYSICS1 {
+        width: 1000px;
+        margin-top: 75px;
+        left:  -410px;
+    }
+
+    .PYIS {
+        z-index: 1000;
+    }
+    
+    #p {
+        margin-left: 100px;
+        margin-top: 530px;
+    }
+    
+    #h2 {
+        margin-left: 185px;
+        margin-top: 520px;
+    }
+    
+    #y2 {
+        margin-left: 270px;
+        margin-top: -80px;
+    }
+    
+    #s3 {
+        margin-left: 360px;
+        margin-top: -80px;
+    }
+    
+    #i {
+        margin-left: 435px;
+        margin-top: -100px;
+    }
+    
+    #c2 {
+        margin-left: 510px;
+        margin-top: -100px;
+    }
+    
+    #s2 {
+        margin-left: 600px;
+        margin-top: -90px;
+    }
+    
+    #dot2 {
+        margin-left: 680px;
+        margin-top: -100px;
+    }
+
+    .ESPORTS {
+        width: 1000px;
+        margin-top: 190px;
+        left:  -410px;
+    }
+
+    #e2 {
+        margin-left: 100px;
+        margin-top: 830px;
+    }
+
+    #s4 {
+        margin-left: 190px;
+        margin-top: -80px;
+    }
+    
+    #p2 {
+        margin-left: 270px;
+        margin-top: -90px;
+    }
+
+    #o {
+        margin-left: 355px;
+        margin-top: -88px;
+    }
+    
+    #r {
+        margin-left: 450px;
+        margin-top: -90px;
+    }
+
+    #t2 {
+        margin-left: 520px;
+        margin-top: -90px;
+    }
+    
+    #s5 {
+        margin-left: 600px;
+        margin-top: 820px;
+    }
+    
+    #dot3 {
+        margin-left: 680px;
+        margin-top: -90px;
+    }
+
+    .panel figure {
+        margin: 5px 1.5%;
+        height: 170px;
+        width: 280px;
+    }
+
+    .panel {
+        width: 100%;
+        height: auto;
+        position: relative
+    }
+
+    .panelOne {
+        position: relative;
+        top: -50px; 
+
+    }
+
+    .panelTwo {
+        position: relative;
+        top: 0px;
+
+    }
+
+    .panelThree {
+        position: relative;
+        top: 60px;
+        left: 0px;
+    }
+
+    .parPageTwo {
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 1500px) and (min-width: 781px){
+    .wholePage .parPage {padding: 40px; width:620px;} 
+
+    body {
+        background-size: 1000px;
+    }
+    
+    .wholePage .parPage {
+        padding: 30px; width:420px;
+    }
+    .wholePage h2 {
+        font-size:30px;
+    }
+    .wholePage .parPage {
+        padding: 30px;
+    }
+    .wholePage .parPageOne, 
+    .wholePage .parPageTwo, 
+    .wholePage .parPageThree {
+        padding-top:100px; padding-bottom:100px;
+    }
+
+    .TECH, .PHYSICS1, .ESPORTS {
+        font-size: 35px;
+    }
+
+    .panelOne {
+        margin: auto;
+        margin-top: -35px;
+        width: 100%;
+    }
+
+    .panelTwo {
+        margin: auto;
+        margin-top: 340px;
+    }
+
+    .panelThree {
+        margin: auto;
+        margin-top: 380px;
+    }
+
+/*TECH TITLE*/
+
+    #t {
+        margin-left: 100px;
+        margin-top: 205px;
+    }
+
+    #e {
+        margin-top: 180px;
+        margin-left: 180px;
+    }
+
+    #c {
+        margin-left: 260px;
+        margin-top: -110px;
+    }
+
+    #h {
+        margin-left: 350px;
+        margin-top: -85px;
+    }
+
+    #dot {
+        margin-left: 450px;
+        margin-top: -120px;
+    }
+
+/*PHYSICS TITLE*/
+.PHYSICS1 {
+    top: 160px;
+}
+
+#p {
+    margin-left: 100px;
+    margin-top: 530px;
+}
+
+#h2 {
+    margin-left: 185px;
+    margin-top: 520px;
+}
+
+#y2 {
+    margin-left: 270px;
+    margin-top: -105px;
+}
+
+#s3 {
+    margin-left: 350px;
+    margin-top: -100px;
+}
+
+#i {
+    margin-left: 440px;
+    margin-top: -105px;
+}
+
+#c2 {
+    margin-left: 510px;
+    margin-top: -110px;
+}
+
+#s2 {
+    margin-left: 600px;
+    margin-top: -100px;
+}
+
+#dot2 {
+    margin-left: 680px;
+    margin-top: -120px;
+}
+    
+/* ESPORTS TITLE */
+.ESPORTS {
+    top: 330px;
+}
+
+    #e2 {
+        margin-left: 100px;
+        margin-top: 830px;
+    }
+
+    #s4 {
+        margin-left: 185px;
+        margin-top: -95px;
+    }
+    
+    #p2 {
+        margin-left: 270px;
+        margin-top: -105px;
+    }
+
+    #o {
+        margin-left: 350px;
+        margin-top: -100px;
+    }
+    
+    #r {
+        margin-left: 440px;
+        margin-top: -105px;
+    }
+
+    #t2 {
+        margin-left: 525px;
+        margin-top: -115px;
+    }
+    
+    #s5 {
+        margin-left: 600px;
+        margin-top: 820px;
+    }
+    
+    #dot3 {
+        margin-left: 680px;
+        margin-top: -110px;
+    }
+}
